@@ -1,0 +1,96 @@
+.pageWrapper {
+  padding: 24px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.trophyIcon {
+  font-size: 32px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+}
+
+.gridCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.torneoCard {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.15s ease;
+}
+
+.torneoCard:hover {
+  transform: translateY(-2px);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.cardIcon {
+  font-size: 24px;
+}
+
+.cardName {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+}
+
+.cardDetail {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.inscribirseBtn {
+  margin-top: 12px;
+  padding: 8px 14px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.inscribirseBtn:hover {
+  background-color: #357ab8;
+}
+.eliminarBtn {
+  margin-top: 8px;
+  background-color: #e94f4f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.eliminarBtn:hover {
+  background-color: #cc3b3b;
+}
+
+

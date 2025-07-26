@@ -1,0 +1,258 @@
+:root {
+    --clr-bg-primary: #0d6efd;
+    --clr-bg-primary-hover: #0b5ed7;
+    --clr-bg-success: #28a745;
+    --clr-bg-success-hover: #218838;
+    --clr-border: #e0e0e0;
+    --clr-text: #212529;
+    --clr-text-muted: #666c78;
+    --radius: 10px;
+    --card-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 2000;
+    margin-bottom: 1.5rem;
+    color: var(--clr-text);
+}
+
+.filtersRow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.fieldGroup {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.calendarIcon {
+    position: absolute;
+    left: 0.7rem;
+    pointer-events: none;
+    font-size: 1.22rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.calendarIcon::before {
+    content: "📅";
+}
+
+.fieldGroup input[type="date"] {
+    padding: 0.6rem 0.85rem 0.6rem 2.4rem;
+    border: 1px solid #ced4da;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    background: #fff;
+    color: #23272f;
+    width: auto;
+    min-width: 140px;
+    max-width: 180px;
+}
+
+.locationSelect {
+    border: 1px solid #ced4da;
+    border-radius: var(--radius);
+    padding: 0.6rem 0.85rem;
+    font-size: 1rem;
+    background: #fff;
+    color: #23272f;
+    min-width: 200px;
+    max-width: 260px;
+    width: auto;
+    flex: 0 0 auto;
+}
+
+.searchInput {
+    border: 1px solid #ced4da;
+    border-radius: var(--radius);
+    padding: 0.6rem 0.85rem;
+    font-size: 1rem;
+    background: #fff;
+    color: #23272f;
+    min-width: 220px;
+    max-width: 340px;
+    width: auto;
+    flex: 1 1 220px;
+}
+
+
+
+.cardList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+.card {
+    background: #fff;
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.7rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.25rem;
+    box-shadow: var(--card-shadow);
+}
+.infoBlock { flex: 1 1 auto; display: flex; flex-direction: column; gap: 0.8rem; }
+.metaRow   { font-size: 1rem; color: var(--clr-text); display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.bullet    { color: var(--clr-text-muted); }
+.reserveAction { margin-left: auto; display: flex; align-items: center; }
+.canchaName { font-weight: 700; color: var(--clr-text); }
+.slotList { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+.slotBtn {
+    background: var(--clr-bg-success);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.55rem 1.35rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    font-size: 1rem;
+}
+.slotBtn:hover:not(:disabled) { background: var(--clr-bg-success-hover); }
+.slotBtn:disabled             { opacity: 0.6; cursor: not-allowed; }
+.slotBtnSelected              { outline: 2px solid var(--clr-bg-primary); transform: scale(1.05); }
+.reserveBtn {
+    background: var(--clr-bg-success);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.7rem 1.7rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 1rem;
+}
+.reserveBtn:hover:not(:disabled) { background: var(--clr-bg-success-hover); }
+.reserveBtn:disabled             { opacity: 0.6; cursor: not-allowed; }
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1100;
+}
+.modalBox {
+    position: relative;
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 2rem 2.4rem;
+    width: 360px;
+    max-width: 90vw;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+.modalBox h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--clr-text);
+}
+.modalBox p {
+    margin: 0 0 0.8rem;
+    font-size: 0.95rem;
+    color: var(--clr-text);
+}
+.modalBox label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #495057;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 0.8rem;
+}
+.modalBox input[type="text"],
+.modalBox input[type="number"] {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ced4da;
+    border-radius: var(--radius);
+    padding: 0.55rem 0.8rem;
+    font-size: 0.95rem;
+    color: #212529;
+}
+.modalBox input::placeholder { color: #adb5bd; }
+.modalBtns { display: flex; gap: 1rem; }
+.modalBtn {
+    flex: 1 1 0;
+    background: var(--clr-bg-primary);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.7rem 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.modalBtn:hover:not(:disabled) { background: var(--clr-bg-primary-hover); }
+.modalBtn:disabled             { opacity: 0.6; cursor: not-allowed; }
+.closeBtn {
+    position: absolute;
+    top: 0.85rem;
+    right: 0.85rem;
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 0.25rem;
+    background: #dc3545;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s;
+}
+.closeBtn:hover { background: #c82333; }
+.alertOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1200;
+}
+.alertBox {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 1.8rem 2.4rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 320px;
+    width: 90%;
+}
+.alertMsg {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.4rem;
+    color: var(--clr-bg-success);
+}
+.alertBtn {
+    background: var(--clr-bg-primary);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.65rem 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.alertBtn:hover { background: var(--clr-bg-primary-hover); }

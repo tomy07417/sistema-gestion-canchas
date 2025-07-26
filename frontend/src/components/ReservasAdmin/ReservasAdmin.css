@@ -1,0 +1,38 @@
+.reservas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    background-color: #a1a1a1b9;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.reserva-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    background-color: #e0dfdf;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.headers {
+    flex: 1;
+    text-align: center;
+    color: black;
+    font-family: system-ui;
+    font-size: 1rem;
+    margin: 0 0.25rem;
+    font-weight: bold;
+}
+
+.info {
+    flex: 1;
+    text-align: center;
+    color: black;
+    font-family: system-ui;
+    font-size: 1rem;
+    margin: 0 0.25rem;
+}

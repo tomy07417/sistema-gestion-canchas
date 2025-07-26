@@ -1,0 +1,49 @@
+.switchWrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    user-select: none;
+}
+
+.input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: relative;
+    width: 42px;
+    height: 22px;
+    background: #cbd5e1;
+    border-radius: 22px;
+    transition: background 0.2s;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.input:checked + .slider {
+    background: #406be4;
+}
+
+.input:checked + .slider::before {
+    transform: translateX(20px);
+}
+
+.switchLabel {
+    font-size: 1rem;
+    color: #284269;
+    font-weight: 600;
+}

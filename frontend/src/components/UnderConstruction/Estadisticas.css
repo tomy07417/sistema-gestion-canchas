@@ -1,0 +1,8 @@
+.fondo-negro {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 20px; 
+    border-radius: 15px;
+    background-size: cover;
+    }

@@ -1,0 +1,290 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: #f7f8fa;
+}
+
+.formBox {
+    max-width: 520px;
+    width: 100%;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px 0 rgba(80, 100, 150, 0.11);
+    padding: 38px 28px 30px 28px;
+    border: 1px solid #e5e7eb;
+    margin: 48px 0 48px 0;
+}
+
+.title {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: #16213e !important;
+    text-align: center;
+    margin-bottom: 7px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #7485a7 !important;
+    font-size: 1rem;
+    margin-bottom: 26px;
+}
+
+.fieldsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 24px;
+    align-items: end;
+}
+
+.fullWidth {
+    grid-column: 1 / span 2;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.label {
+    font-size: 1rem;
+    color: #284269;
+    font-weight: 600;
+    min-height: 1.6em;
+    margin-bottom: 2px;
+}
+
+.input,
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select {
+    width: 100%;
+    border: 1px solid #c8d1e1;
+    border-radius: 9px;
+    padding: 9px 12px;
+    font-size: 1rem;
+    background: #f6f7fa;
+    font-weight: 400 !important;
+    color: #16213e;
+    transition: border 0.2s;
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+.input:focus,
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+select:focus {
+    border-color: #406be4;
+    outline: none;
+}
+
+.sectionDivider {
+    border-bottom: 1px solid #e4e8ef;
+    margin: 35px 0 16px 0;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #2d3c5b;
+    margin-bottom: 17px;
+}
+
+.franjasGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 20px;
+    margin-bottom: 12px;
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #456ad7;
+    font-weight: 600;
+    margin: 20px 0 0 0;
+    gap: 10px;
+}
+
+.spinner {
+    width: 22px;
+    height: 22px;
+    border: 3px solid #c7d5ef;
+    border-top: 3px solid #406be4;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-right: 6px;
+    display: inline-block;
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.buttonRow {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.submitButton {
+    min-width: 180px;
+    background: linear-gradient(90deg, #3b82f6 0%, #2763b2 100%);
+    color: #fff;
+    font-weight: 700;
+    padding: 12px 0;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.12rem;
+    cursor: pointer;
+    transition: background 0.18s;
+    box-shadow: 0 2px 8px 0 rgba(32, 80, 198, 0.08);
+}
+.submitButton:hover {
+    background: linear-gradient(90deg, #2563eb 0%, #1d4ba0 100%);
+}
+
+
+
+.wrapper {
+    max-width: 950px;
+    margin: 0 auto;
+    padding-top: 36px;
+}
+
+.title {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #23272f;
+    margin-bottom: 28px;
+    letter-spacing: -0.5px;
+}
+
+.canchasGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 22px;
+    margin-bottom: 36px;
+}
+
+.canchaCard {
+    background: #fff;
+    border-radius: 13px;
+    box-shadow: 0 2px 8px rgba(16, 26, 40, 0.07);
+    padding: 24px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 18px;
+}
+.canchaInfo {
+    color: #23272f;
+}
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 100px;
+    box-sizing: border-box;
+}
+
+.inputError {
+    min-height: 20px;
+    font-size: 0.96rem;
+    color: #ea1111;
+    margin-left: 3px;
+    display: flex;
+    align-items: center;
+}
+
+
+.buttonRow {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.button {
+    font-weight: 600;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.editButton {
+    background: #22c55e;
+    color: #fff;
+}
+
+.editButton:hover {
+    background: #16a34a;
+}
+
+.deleteButton {
+    background: #ef4444;
+    color: #fff;
+}
+
+.deleteButton:hover {
+    background: #dc2626;
+}
+
+.agregarButton {
+    background: #fff;
+    color: #23272f;
+    border: 2px solid #23272f;
+}
+
+.agregarButton:hover {
+    background: #f3f4f6;
+    color: #0f172a;
+}
+.wrapper {
+    max-width: 950px;
+    margin: 0 auto;
+    padding-top: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.canchasGrid {
+    width: 100%;
+    margin-bottom: 32px;
+}
+.formBox {
+    margin: 0 auto;
+}
+.modalOverlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(30,30,40,0.30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1200;
+}
+.modalBox {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px 0 rgba(80, 100, 150, 0.17);
+    padding: 34px 32px 28px 32px;
+    min-width: 350px;
+    max-width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}

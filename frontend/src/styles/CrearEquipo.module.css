@@ -1,0 +1,118 @@
+.formWrapper {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px 0 rgba(80, 100, 150, 0.13);
+    max-width: 520px;
+    margin: 44px auto 0 auto;
+    padding: 36px 32px 30px 32px;
+    border: 1.5px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.iconCircle {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #24c27c1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: #22bb6b;
+    margin-bottom: 4px;
+}
+.title {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: #16213e !important;
+    text-align: center;
+    margin-bottom: 2px;
+}
+.subtitle {
+    color: #7485a7 !important;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.gridSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 24px;
+    margin-bottom: 10px;
+    align-items: end;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+}
+.label {
+    font-size: 1rem;
+    color: #284269;
+    font-weight: 600;
+    margin-bottom: 2px;
+    min-height: 2.2em;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 2px;
+}
+.input,
+input[type="text"] {
+    width: 100%;
+    border: 1.5px solid #dde4f3;
+    border-radius: 9px;
+    padding: 10px 13px;
+    font-size: 1rem;
+    background: #f6f7fa;
+    color: #16213e;
+    transition: border 0.2s;
+    box-sizing: border-box;
+    margin: 0;
+}
+.input:focus,
+input[type="text"]:focus {
+    border-color: #24c27c;
+    outline: none;
+}
+
+.buttonRow {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+.submitButton {
+    min-width: 180px;
+    background: linear-gradient(90deg, #22bb6b 0%, #18ad5e 100%);
+    color: #fff;
+    font-weight: 700;
+    padding: 13px 0;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.12rem;
+    cursor: pointer;
+    transition: background 0.18s;
+    box-shadow: 0 2px 8px 0 rgba(32, 80, 198, 0.08);
+}
+.submitButton:hover {
+    background: linear-gradient(90deg, #16944e 0%, #128341 100%);
+}
+
+@media (max-width: 700px) {
+    .formWrapper {
+        padding: 22px 4vw 20px 4vw;
+        max-width: 99vw;
+    }
+    .gridSection {
+        grid-template-columns: 1fr;
+        gap: 13px 0;
+    }
+}
